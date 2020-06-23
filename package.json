@@ -1,0 +1,31 @@
+{
+  "name": "gitexcercise",
+  "version": "1.0.0",
+  "description": "My git excercise MIU",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Solofaxum/gitExcercise.git"
+  },
+  "keywords": [
+    "git",
+    "branch",
+    "master",
+    "add",
+    ".",
+    "commit",
+    "merge"
+  ],
+  "author": "Solomon Gebreslasie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Solofaxum/gitExcercise/issues"
+  },
+  "homepage": "https://github.com/Solofaxum/gitExcercise#readme"
+}
