@@ -25,6 +25,15 @@ class MyFuncs{
         //   let myarray2 = [5, 4, 3, 2, 1,8,7];
         //   console.log(sumOfTwoArrays(myarray1, myarray2));
     
+
+        mySubstring(string, startIndex, endIndex){
+            let endString= endIndex ||  string.length;
+            let output=string.slice(startIndex, endString+1);
+            console.log(output)
+        }
+        // let str='This is a string'
+        // mySubstring(str, 5, 8);
+        // mySubstring(str, 5);
     }
     
     module.exports = new MyFuncs;
