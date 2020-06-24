@@ -9,7 +9,7 @@ const myFuncs = require ('../src/myFuncs');
  */
 describe('Test sumOfTwoArrays.js', function () {
     beforeEach(()=>{
-        console.log('Array Sum Tetser')
+        console.log('ArraySum')
     })
     it('First array bigger', function () {
         assert.deepEqual(myFuncs.sumOfTwoArrays([1, 2, 3, 4], [3, 4, 5]), [4, 6, 8, 4])
@@ -36,13 +36,13 @@ describe('Test sumOfTwoArrays.js', function () {
  */
 describe('Test mySubstring.js', function () {
    afterEach(()=>{
-        console.log('Substring Checker')
+        console.log('Substring')
     })
     describe('Best Cases', function () {
 
         it('Best 1', function () {
             let str = 'Software';
-            assert.equal(myFuncs.mySubstring(str, 2, 3), "ft");
+            assert.deepEqual(myFuncs.mySubstring(str, 2, 5), "ftw");
         });
         it('Best 2', function () {
             let str = 'Software';
@@ -56,25 +56,28 @@ describe('Test mySubstring.js', function () {
 
     describe('Boundary Conditions', function () {
         it('Boundary 1', function () {
-            assert.equal(myFuncs.mySubstring('Software', -2, -3), "ftwa");
+            let str = 'Software';
+            assert.equal(myFuncs.mySubstring(str, 1, 'a'), "");
         });
         it('Boundary 2', function () {
-            assert.equal(myFuncs.mySubstring('Software', 0, 9), "ftw");
+            let str = 'Software';
+            assert.equal(myFuncs.mySubstring(str, 0, 7), "Softwar");
         });
         it('Boundary 3', function () {
-            assert.equal(myFuncs.mySubstring('Software', -5), "ft");
+            let str = 'Software';
+            assert.equal(myFuncs.mySubstring(str, 6), "re");
         });
     });
 
     describe('Type Check', function () {
         it('Type 1', function () {
-            assert.equal(myFuncs.mySubstring(134, 'a', 'c'), "12");
+            assert.equal(myFuncs.mySubstring(12, 4), "");
         });
         it('Type 2', function () {
-            assert.equal(myFuncs.mySubstring('Software', 'a', 'b'), "soft");
+            assert.equal(myFuncs.mySubstring('Software', 'a', 4), "");
         });
         it('Type 3', function () {
-            assert.equal(myFuncs.mySubstring('Software', 0, 'b'), "ware");
+            assert.equal(myFuncs.mySubstring('Software', 0, 'b'), "");
         });
     })
 });
