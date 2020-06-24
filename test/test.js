@@ -1,24 +1,29 @@
 const assert = require('assert');
-const myFuncs = require ('../src/funcs');
+const myFuncs = require ('../src/myFuncs');
+
+
 
 /**
  * Tester for adding two similar/different size array groups
  * @function sumOfTwoArrays
  */
 describe('Test sumOfTwoArrays.js', function () {
-    it('This should pass the test', function () {
+    beforeEach(()=>{
+        console.log('Array Sum Tetser')
+    })
+    it('First array bigger', function () {
         assert.deepEqual(myFuncs.sumOfTwoArrays([1, 2, 3, 4], [3, 4, 5]), [4, 6, 8, 4])
     })
 
-    it('This should pass the test', function () {
+    it('First array smaller', function () {
         assert.deepEqual(myFuncs.sumOfTwoArrays([1, 4], [3, 4, 5]), [4, 8, 5])
     })
 
-    it('This should pass the test', function () {
+    it('Same size array', function () {
         assert.deepEqual(myFuncs.sumOfTwoArrays([1, 2, 1], [2, 1, 2]), [3, 3, 3])
     })
-    it('This should pass the test', function () {
-        assert.deepEqual(myFuncs.sumOfTwoArrays([1, 4], [3, 4, 5]), [4, 8, 5])
+    it('Arrays with negative numbers', function () {
+        assert.deepEqual(myFuncs.sumOfTwoArrays([-1, 4], [3, -4, 5]), [2, 0, 5])
     })
 
 })
@@ -30,19 +35,22 @@ describe('Test sumOfTwoArrays.js', function () {
  * @function mySubstring
  */
 describe('Test mySubstring.js', function () {
+   afterEach(()=>{
+        console.log('Substring Checker')
+    })
     describe('Best Cases', function () {
 
         it('Best 1', function () {
-            let str = 'Software'
-            assert.deepEqual(myFuncs.mySubstring(str, 2, 3), "ft");
+            let str = 'Software';
+            assert.equal(myFuncs.mySubstring(str, 2, 3), "ft");
         });
         it('Best 2', function () {
-            let str = 'Software'
-            assert.deepEqual(myFuncs.mySubstring(str, 4), "ware");
+            let str = 'Software';
+            assert.equal(myFuncs.mySubstring(str, 4), "ware");
         });
         it('Best 3', function () {
-            let str = 'Software'
-            assert.deepEqual(myFuncs.mySubstring(str, 0), "Software");
+            let str = 'Software';
+            assert.equal(myFuncs.mySubstring(str, 0), "Software");
         });
     })
 
